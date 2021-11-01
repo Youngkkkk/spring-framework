@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+    id 'war'
+}
+
+group 'org.springframework'
+version '5.3.13-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    api(project(":spring-webmvc"))
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}
